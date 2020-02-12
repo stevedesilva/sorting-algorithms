@@ -1,13 +1,13 @@
-package bubble_test
+package insertion_test
 
 import (
 	"reflect"
 	"testing"
 
-	"github.com/stevedesilva/sorting-algorithms/bubble"
+	"github.com/stevedesilva/sorting-algorithms/insertion"
 )
 
-func TestBubbleSort_should_sort_sequence(t *testing.T) {
+func TestInsertionSort_should_sort_sequence(t *testing.T) {
 	type test struct {
 		input []int
 		want  []int
@@ -29,7 +29,7 @@ func TestBubbleSort_should_sort_sequence(t *testing.T) {
 	}
 
 	for _, tc := range tests {
-		actual := bubble.Sort(tc.input)
+		actual := insertion.Sort(tc.input)
 		if !reflect.DeepEqual(tc.want, actual) {
 			t.Errorf("expected: %v, got: %v", tc.want, actual)
 		}
