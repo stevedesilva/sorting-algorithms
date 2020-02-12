@@ -37,7 +37,7 @@ package bubble
 // 	return in
 // }
 
-// BubbleSort alg
+// Sort alg
 func Sort(items []int) []int {
 
 	L := len(items)
