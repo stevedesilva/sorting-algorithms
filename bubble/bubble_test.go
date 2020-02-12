@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/stevedesilva/learngo/algorithms/sorting/bubble"
+	"github.com/stevedesilva/sorting-algorithms/bubble"
 )
 
 func TestBubbleSort_should_sort_sequence(t *testing.T) {
