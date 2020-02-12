@@ -17,11 +17,12 @@ jobs:
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool
-    working_directory: /go/src/github.com/stevedesilva/sorting-algorithms
+    #working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
+    working_directory: /go/src/github.com/github.com/stevedesilva/sorting-algorithms
     steps:
       - checkout
 
       # specify any bash command here prefixed with `run: `
-      - run: echo {{ORG_NAME}}/{{REPO_NAME}}
+      - run: echo ${ORG_NAME} ${REPO_NAME}
       - run: go get -v -t -d ./...
       - run: go test -v ./...
